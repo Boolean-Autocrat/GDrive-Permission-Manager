@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Google Drive</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Shared Files in My Google Drive</h1>
+    <ul>
+        {% for file in shared_files %}
+        <li>
+            <strong>File Name: </strong>
+            <a href="{{ file[1] }}"><span>{{ file[0] }}</span></a>
+            <br><strong>Permissions:</strong>
+            <ul>
+                {% for details in file[2:] %}
+                <ul>
+                    {% for user in details %}
+                    <li>{{ user }} </li> {% endfor %}
+                </ul><br> {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
