@@ -110,3 +110,30 @@ h1 {
     font-family: monospace;
     margin: 0.5rem 1rem;
 }
+
+#email {
+    margin: 0 auto;
+    padding: 0.25rem;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+form {
+    display: inline-block;
+}
+
+form label {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    font-family: monospace;
+}
+
+#submit {
+    margin: 0 1rem;
+    padding: 0.25rem;
+    border-radius: 5px;
+    background: transparent;
+    font-family: monospace;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}

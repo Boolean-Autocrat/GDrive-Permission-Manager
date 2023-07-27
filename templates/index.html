@@ -7,12 +7,18 @@
 </head>
 
 <body>
-    <h1>Shared Files in My Google Drive</h1>
+    <h1>Google Drive Permission Manager</h1>
+    <p style="text-align: left; font-size: 1.1rem; font-family: monospace;margin-top: 0.75rem; margin-bottom: 0.75rem;">- By Suyash</p>
+    <form method="post" action="/revoke_user_permissions">
+        <label for="email">Enter the email address to revoke all permissions:</label>
+        <input type="email" id="email" name="email" required>
+        <input type="submit" id="submit" value="Revoke Permissions">
+    </form>
     <ul>
         {% for file in shared_files %}
         <li>
             <strong>File Name: </strong>
-            <a href="{{ file[1] }}"><span>{{ file[0] }}</span></a>
+            <a target="_blank" href="{{ file[1] }}"><span>{{ file[0] }}</span></a>
             <br><strong>Permissions:</strong>
             <ul>
                 {% for details in file[2:] %}
